@@ -14,15 +14,17 @@ bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/acme-yg/main/acme.s
 
 2：支持80端口模式与DNS API模式，支持单域名与泛域名
 
-3：支持Cloudflare/腾讯DNSPod/阿里Aliyun托管解析平台的DNS API申请
+3：80端口模式支持【没有域名也能申请域名证书】，利用nip.io后缀域名解析IP申请域名证书
 
-4：查询、撤销并删除当前已申请的域名证书 
+4：支持Cloudflare/腾讯DNSPod/阿里Aliyun托管解析平台的DNS API申请
 
-5：手动一键或者指定续期域名证书
+5：查询、撤销并删除当前已申请的域名证书 
 
-6：两个证书文件存放在root/ygkkkca文件中
+6：手动一键或者指定续期域名证书
 
-7：已集成以下代理脚本中（可共享一个证书）：
+7：两个证书文件存放在root/ygkkkca文件中
+
+8：已集成以下代理脚本中（可共享一个证书）：
 
 [sing-box-yg脚本](https://github.com/yonggekkk/sing-box-yg)
 
