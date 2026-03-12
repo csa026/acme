@@ -246,11 +246,11 @@ fi
 
 ACMEstandaloneDNS(){
 v4v6
-vpsip=${v4:-$v6}
-readp "请输入解析完成的域名 (回车跳过表示没有域名，使用nip.io后缀域名自动解析IP):" ym
-if [ -z "$ym" ]; then
-case "$vpsip" in *:*) ym="${vpsip//:/-}.nip.io" ;; *) ym="${vpsip//./-}.nip.io" ;; esac
-fi
+#vpsip=${v4:-$v6}
+readp "请输入解析完成的域名:" ym
+#if [ -z "$ym" ]; then
+#case "$vpsip" in *:*) ym="${vpsip//:/-}.nip.io" ;; *) ym="${vpsip//./-}.nip.io" ;; esac
+#fi
 green "已输入的域名:$ym" && sleep 1
 checkacmeca
 checkip
@@ -459,9 +459,8 @@ green "Acme-yg脚本版本号 V26.3.11"
 yellow "提示："
 yellow "1、脚本不支持多IP的VPS，SSH登录的IP与VPS共网IP必须一致"
 yellow "2、80端口模式仅支持单域名证书申请，在80端口不被占用的情况下支持自动续期"
-yellow "3、80端口模式支持【没有域名也能申请域名证书】，利用nip.io后缀域名解析IP申请域名证书"
-yellow "4、DNS API模式不支持freenom免费域名申请，支持单域名与泛域名证书申请，无条件自动续期"
-yellow "5、泛域名申请前须在服务商解析处设置一个名称为 * 字符的解析记录 (输入格式：*.一级或者二级主域)"
+yellow "3、DNS API模式不支持freenom免费域名申请，支持单域名与泛域名证书申请，无条件自动续期"
+yellow "4、泛域名申请前须在服务商解析处设置一个名称为 * 字符的解析记录 (输入格式：*.一级或者二级主域)"
 yellow "公钥文件crt保存路径：/root/ygkkkca/cert.crt"
 yellow "密钥文件key保存路径：/root/ygkkkca/private.key"
 echo
