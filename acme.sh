@@ -357,12 +357,11 @@ fi
 
 acme(){
 mkdir -p /root/ygkkkca
-ab="1.选择独立80端口模式申请证书（仅需域名，小白推荐），安装过程中将强制释放80端口\n2.选择DNS API模式申请证书（需域名、ID、Key），自动识别单域名与泛域名\n0.返回上一层\n 请选择："
+ab="1.选择独立80端口模式申请证书（仅需域名，小白推荐），安装过程中将强制释放80端口\n2.选择DNS API模式申请证书（需域名、ID、Key），自动识别单域名与泛域名\n 请选择："
 readp "$ab" cd
 case "$cd" in 
 1 ) acme2 && acme3 && ACMEstandaloneDNScheck;;
 2 ) acme3 && ACMEDNScheck;;
-0 ) start_menu;;
 esac
 }
 
