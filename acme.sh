@@ -248,7 +248,7 @@ ACMEstandaloneDNS(){
 v4v6
 vpsip=${v4:-$v6}
 readp "请输入解析完成的域名 (回车跳过表示没有域名，使用nip.io后缀域名自动解析IP):" ym
-if [ -z "$ym"]; then
+if [ -z "$ym" ]; then
 case "$vpsip" in *:*) ym="${vpsip//:/-}.nip.io" ;; *) ym="${vpsip//./-}.nip.io" ;; esac
 fi
 green "已输入的域名:$ym" && sleep 1
